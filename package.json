@@ -1,0 +1,31 @@
+{
+  "name": "loftschool",
+  "version": "1.0.0",
+  "description": "Т�ест�овое задание",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dshved/loftschool.git"
+  },
+  "author": "Dmitriy Shved",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dshved/loftschool/issues"
+  },
+  "homepage": "https://github.com/dshved/loftschool#readme",
+  "dependencies": {
+    "browser-sync": "^2.12.8",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-if": "^2.0.1",
+    "gulp-jade": "^1.1.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-sass": "^2.3.1",
+    "gulp-uglify": "^1.5.3",
+    "gulp-useref": "^3.1.0",
+    "wiredep": "^4.0.0"
+  }
+}
