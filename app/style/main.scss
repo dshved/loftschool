@@ -1,3 +1,305 @@
+@import 'mixin';
+@import 'font';
+
+* {
+	box-sizing: border-box;
+}
+
+html,
 body {
-	background-color: #eee;
+	width: 100%;
+	height: 100%;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	li {
+		list-style: none;
+	}
+}
+
+p {
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+body {
+	background-image: url('../img/bg.png');
+}
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	position: relative;
+	.empty {
+		height: 77px;
+	}
+}
+
+.container {
+	width: 960px;
+	margin: 0 auto;
+}
+
+.header {
+	padding-top: 40px;
+	position: relative;
+	height: 119px;
+	background-color: #eff3f7;
+	&:after {
+		position: absolute;
+		bottom: 0;
+		@include line;
+	}
+	&__logo {
+		float: left;
+	}
+	&__social {
+		float: right;
+	}
+	@include clearfix;
+}
+
+.social__list li {
+	display: inline-block;
+}
+
+.list__item {
+	a {
+		color: #58697a;
+		&:hover {
+			color: #3ba8c0;
+		}
+	}
+}
+
+.main {
+	padding-top: 50px;
+}
+
+.sidebar,
+.content {
+	float: left;
+}
+
+.main {
+	@include clearfix;
+}
+
+.sidebar {
+	width: 250px;
+	margin-right: 60px;
+	margin-bottom: 23px;
+}
+
+.content {
+	width: 650px;
+	
+}
+.block {
+	width: 650px;
+	border-radius: 4px;
+	background-color: #eff3f7;
+	margin-bottom: 25px;
+	&__header {
+		color: #3ba7bf;
+		font-family: "Fira Sans", sans-serif;
+		font-size: 27px;
+		padding: 18px 27px;
+		&:after {
+			position: relative;
+			left: -27px;
+			bottom: -18px;
+			content: '';
+			display: block;
+			width: 341px;
+			height: 2px;
+			background-color: #3ba7bf;
+		}
+	}
+	&__user-pic {
+		float: left;
+		padding: 25px 20px 25px 56px;
+		img {
+			width: 148px;
+			height: 148px;
+			border-radius: 50%;
+			border: 5px solid #2fa5bc;
+			background-size: cover;
+			background-position: center center;
+		}
+	}
+	&__user-info {
+		float: left;
+		width: 420px;
+		padding-top: 27px;
+		.list__item {
+			color: #37424c;
+			font-family: "fira_sansbook", sans-serif;
+			font-size: 15px;
+			.item__name {
+				color: #49535d;
+				font-family: "fira_sansmedium", sans-serif;
+				font-size: 17px;
+			}
+			.skill {
+				display: inline-block;
+				color: #fff;
+				font-family: "Proxima Nova Condensed",sans-serif;
+				font-size: 14px;
+				font-weight: bold;
+				padding: 4px 14px;
+				margin-left: 8px;
+				border-radius: 2px;
+				background: #2d8ba1;
+				background: -moz-linear-gradient(top, #2d8ba1 0%, #3ba7bf 50%, #2d8ba1 50%, #3ba7bf 100%);
+				background: -webkit-linear-gradient(top, #2d8ba1 0%,#3ba7bf 50%,#2d8ba1 50%,#3ba7bf 100%);
+				background: linear-gradient(to bottom, #2d8ba1 0%,#3ba7bf 50%,#2d8ba1 50%,#3ba7bf 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2d8ba1', endColorstr='#3ba7bf',GradientType=0 );
+			}
+		}
+	}
+	.work__list {
+		margin-left: 58px;
+		.list__item {
+			margin: 20px 0;
+			i {
+				float: left;
+				margin-right: 30px;
+				color: #58697a;
+			}
+			.work-place,
+			.work-date {
+				display: block;
+				color: #49535d;
+				font-family: "Fira Sans", sans-serif;
+			}
+			.work-place {
+				font-size: 17px;
+			}
+			.work-date {
+				font-size: 15px;
+			}
+		}
+
+	}
+
+	@include clearfix;
+}
+
+.menu__list {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.menu__item {
+	width: 250px;
+	background-color: #eff3f7;
+	text-align: center;
+	&_active {
+		background-color: #3ba7bf;
+	}
+	.item__link {
+		font-family: "fira_sansbook", sans-serif;
+		font-size: 23px;
+		color: #9499a7;
+		display: block;
+		padding: 20px 5px;
+		margin: 0 10px;
+		border-bottom: 2px solid #3ba7bf;
+		&:hover {
+			color: #3ba7bf;
+		}
+	}
+	&:first-child {
+		border-radius: 4px 4px 0 0;
+	}
+	&:last-child {
+		border-radius: 0 0 4px 4px;
+		.item__link {
+			border-bottom: none;
+		}
+	}
+}
+
+.menu__item_active .item__link {
+	color: #fff;
+	&:hover {
+		color: #fff;
+	}
+}
+.contacts {
+	width: 250px;
+	margin-top: 25px;
+}
+.contact__list {
+	display: table-cell;
+	vertical-align: middle;
+	.contact__item {
+		.item__link {
+			display: block;
+			color: #fff;
+			font-family: "fira_sansbook", sans-serif;
+			font-size: 17px;
+			width: 250px;
+			padding: 6px 10px 7px 40px;		
+			i {
+				padding-right: 20px;
+			}
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		&:first-child {
+			border-radius: 4px 4px 0 0;
+		}
+		
+		.link__mail {
+			background-color: #40b9d4;
+		}
+		.link__tel {
+			background-color: #47cae8;
+		}
+		.link__skype {
+			background-color: #50d9f8;
+			border-radius: 0 0 4px 4px;
+		}
+		&:last-child {
+			border-radius: 0 0 4px 4px;
+		}
+	}
+	.contact__header {
+		color: #fafbfd;
+		font-family: "fira_sansbook", sans-serif;
+		font-size: 21px;
+		text-align: left;
+		padding: 4px 21px;
+		background-color: #3ba7bf;
+
+	}
+}
+
+.footer {
+	height: 77px;
+	margin-top: -77px;
+	background-color: #eff3f7;
+	&__login {
+		float: left;
+		padding-top: 24px;
+	}
+	&__copyright {
+		color: #49535d;
+		font-family: "fira_sans", sans-serif;
+		font-size: 14px;
+		text-align: center;
+		padding-top: 28px;
+	}
+	&:before {
+		@include line;
+	}
+	@include clearfix;
 }

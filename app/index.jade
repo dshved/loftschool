@@ -6,6 +6,7 @@ head
 	//build:css css/vendor.css
 	//bower:css
 	link(rel='stylesheet', href='bower_components/normalize-css/normalize.css')
+	link(rel='stylesheet', href='bower_components/components-font-awesome/css/font-awesome.css')
 	//endbower
 	//endbuild
 
@@ -13,6 +14,102 @@ head
 	link(rel="stylesheet", href="style/main.css")
 	//endbuild
 body
+	.wrapper
+		header.header
+			.container
+				.header__logo
+					a.logo(href='#')
+						img.logo_img(src='img/logo.png', alt='LoftSchool')
+				.header__social
+					ul.social__list
+						li.list__item
+							a(href='#')
+								span.fa-stack.fa-lg
+									i.fa.fa-circle.fa-stack-2x
+									i.fa.fa-vk.fa-stack-1x.fa-inverse
+						li.list__item
+							a(href='#')
+								span.fa-stack.fa-lg
+									i.fa.fa-circle.fa-stack-2x
+									i.fa.fa-twitter.fa-stack-1x.fa-inverse
+						li.list__item
+							a(href='#')
+								span.fa-stack.fa-lg
+									i.fa.fa-circle.fa-stack-2x
+									i.fa.fa-facebook.fa-stack-1x.fa-inverse
+						li.list__item
+							a(href='#')
+								span.fa-stack.fa-lg
+									i.fa.fa-circle.fa-stack-2x
+									i.fa.fa-github.fa-stack-1x.fa-inverse
+		section.main
+			.container
+				.sidebar
+					ul.menu__list
+						li.menu__item.menu__item_active
+							a.item__link(href='') Обо мне
+						li.menu__item
+							a.item__link(href='') Мои работы
+						li.menu__item
+							a.item__link(href='') Связаться со мной
+					.contacts
+						ul.contact__list
+							li.contact__item.contact__header Контакты
+							li.contact__item
+								a.item__link.link__mail(href='mailto:mymail@mail.ru') #[i.fa.fa-envelope-o(aria-hidden='true')] mymail@mail.ru
+							li.contact__item
+								a.item__link.link__tel(href='tel:+546855785') #[i.fa.fa-phone(aria-hidden='true')] +546855785
+							li.contact__item
+								a.item__link.link__skype(href='skype:nickname') #[i.fa.fa-skype(aria-hidden='true')] nickname
+				.content
+					.block
+						.block__header Основная информация
+						.block__user-pic
+							img(src="img/user.jpg", alt="Моё фото")
+						.block__user-info
+							ul.user-info__list
+								li.list__item	#[span.item__name Меня зовут:] Иванов Андрей Степанович
+								li.list__item	#[span.item__name Мой возраст:] 25 лет
+								li.list__item	#[span.item__name Мой город:] Санкт-Петерург, Россия
+								li.list__item	#[span.item__name Моя специализация:] FRONTEND разработчик
+								li.list__item	#[span.item__name Ключевые навыки:]
+									span.skill html
+									span.skill javascript
+									span.skill gulp
+									span.skill git
+
+					.block
+						.block__header Опыт работы
+						ul.work__list
+							li.list__item
+								i.fa.fa-briefcase.fa-fw.fa-3x(aria-hidden='true')
+								span.work-place "ИП Боровицкий" - Продавец дисков
+								span.work-date Сентябрь 2005 - Август 2008
+							li.list__item
+								i.fa.fa-briefcase.fa-fw.fa-3x(aria-hidden='true')
+								span.work-place "ИП Боровицкий" - Продавец дисков
+								span.work-date Сентябрь 2005 - Август 2008
+
+
+					.block
+						.block__header Образование
+						ul.work__list
+							li.list__item
+								i.fa.fa-graduation-cap.fa-fw.fa-3x(aria-hidden='true')
+								span.work-place Незаконченное высшее. СПБГУ ИТМО
+								span.work-date Октябрь 2012 - по настоящее время
+							li.list__item
+								i.fa.fa-list-alt.fa-fw.fa-3x(aria-hidden='true')
+								span.work-place Курсы Loftschool.ru
+								span.work-date Ноябрь 2014 - по настоящее время
+		.empty
+	footer.footer
+		.container
+			.footer__login
+				a.login__link(href="#")
+					img(src="img/login.png", alt="Выполнить вход")
+			.footer__copyright © 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его
+
 
 
 
