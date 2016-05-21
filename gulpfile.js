@@ -7,7 +7,13 @@ var gulp = require('gulp'),
     jade = require('gulp-jade'),
     sass = require('gulp-sass'),
 		browserSync = require('browser-sync'),
-		clean = require('gulp-clean');
+		clean = require('gulp-clean'),
+    ghPages = require('gulp-gh-pages');
+ 
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
+});;
  
 gulp.task('clean', function () {
 	return gulp.src('dist', {read: false})
