@@ -209,7 +209,7 @@ body {
 		color: #9499a7;
 		display: block;
 		padding: 20px 5px;
-		margin: 0 10px;
+		margin: 0px 0px;
 		border-bottom: 2px solid #3ba7bf;
 		&:hover {
 			color: #3ba7bf;
@@ -284,6 +284,7 @@ body {
 }
 
 .footer {
+	position: relative;
 	height: 77px;
 	margin-top: -77px;
 	background-color: #eff3f7;
@@ -302,4 +303,24 @@ body {
 		@include line;
 	}
 	@include clearfix;
+}
+
+.login__link {
+	display: block;
+	width: 20px;
+	height: 32px;
+	background-image: url('../img/login.png');
+	&:hover {
+		background-image: url('../img/login_up.png');
+	}
+}
+
+@media screen and (max-width: 960px){
+
+}
+@media screen and (max-width: 768px){
+
+}
+@media screen and (max-width: 320px){
+
 }

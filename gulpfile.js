@@ -81,10 +81,7 @@ gulp.task('fonts', function() {
     gulp.src('app/fonts/*')
       .pipe(gulp.dest('dist/fonts'));
 });
-gulp.task('font', function() {
-    gulp.src('app/font/*')
-      .pipe(gulp.dest('dist/font'));
-});
+
 
 
 gulp.task('watch', function() {
